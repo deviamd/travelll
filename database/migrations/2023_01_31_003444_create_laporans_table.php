@@ -13,14 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('transaksis', function (Blueprint $table) {
+        Schema::create('laporans', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('id_orders');
-            $table->integer('total_bayar');
-            $table->enum('metode_pembayaran', ['gopay', 'e-banking', 'supermarket']);
-            $table->date('tanggal_pembayaran');
-
-            $table->foreign('id_orders')->references('id')->on('orders')->onDelete('cascade');
             $table->timestamps();
         });
     }
@@ -32,6 +26,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('transaksis');
+        Schema::dropIfExists('laporans');
     }
 };

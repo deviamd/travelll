@@ -8,10 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class transaksi extends Model
 {
     protected $table = "transaksis";
-    protected $primarykey = "id";
+    protected $primarykey = "idt";
     protected $fillable = [
 
-        'id', 'id_order','total_bayar','metode_pembayaran','tanggal_pembayaran',
+        'idt', 'id_order','total_bayar','metode_pembayaran','tanggal_pembayaran',
     ];
 
     public function service()

@@ -30,7 +30,7 @@ class TransaksiController extends Controller
      */
     public function create()
     {
-        $transaksi = Transaksi::get();
+        $transaksi = transaksi::get();
         return view('transaksi.create', compact('transaksi'));
     }
 
@@ -44,13 +44,13 @@ class TransaksiController extends Controller
     {
         $data = $request->all();
         $model = new transaksi;
-        $model->id_order = $request->id_order;
+        $model->id_orders = $request->id_orders;
         $model->total_bayar= $request->total_bayar;
         $model->metode_pembayaran = $request->metode_pembayaran;
         $model->tanggal_pembayaran = $request->tanggal_pembayaran;
 
         $validasi = Validator::make($data,[
-            'id_order'=>'required|max:255',
+            'id_orders'=>'required|max:255',
             'total_bayar'=>'required|max:255',
             'metode_pembayaran'=>'required|max:255',
             'tanggal_pembayaran'=>'required|max:255',

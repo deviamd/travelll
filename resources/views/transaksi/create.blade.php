@@ -28,7 +28,7 @@ Transaksi
             @endif
 
 
-                        
+
                             <div class="mb-3">
                                 <label>Total Bayar</label>
                                 <input type="text" name="total_bayar" class="form-control" required="" placeholder="Silahkan input Total Bayar">
@@ -48,10 +48,12 @@ Transaksi
                                     <input type="date" name="tanggal_pembayaran" class="form-control" required="" placeholder="Silahkan input Tanggal Pembayaran">
                                 </div>
                             </div>
+                            
+
                             <div class="mb-3">
                                 <div class="name">Kelas</div>
                                 <div class="value">
-                                    <select name="id_order" class="form-control">
+                                    <select name="id_orders" class="form-control">
                                         <option value="opt1">Pilih Kelas</option>
                                         <option value="1">Ekonomi</option>
                                         <option value="2">Bisnis</option>

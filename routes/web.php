@@ -6,6 +6,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\TransaksiController;
+use App\Http\Controllers\LaporanController;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,3 +39,7 @@ Route::resource('/user', UserController::class);
 Route::resource('/service', ServiceController::class);
 Route::resource('/order', OrderController::class);
 Route::resource('/transaksi', TransaksiController::class);
+// Route::resource('/laporan', LaporanController::class);
+Route::get('/laporan', [LaporanController::class, 'index'])->name('laporan.index');
+
+Route::get('/laporan/pdf', [LaporanController::class, 'pdf'])->name('laporan.pdf');

@@ -89,8 +89,8 @@ class OrderController extends Controller
      */
     public function edit($id)
     {
-        $service = Service::findOrFail($id);
-        return view('order.edit',compact('order', 'service'));
+        $order = Order::findOrFail($id);
+        return view('order.edit',compact('order'));
     }
 
     /**
@@ -105,13 +105,13 @@ class OrderController extends Controller
         $order = order::find($id);
         $data = $request->all();
         // $model->id_service = $request->service;
-        $model->nama = $request->nama;
-        $model->email = $request->email;
-        $model->kelas = $request->kelas;
-        $model->jumlah_tiket = $request->jumlah_tiket;
-        $model->harga= $request->harga;
-        $model->stasiun_asal = $request->stasiun_asal;
-        $model->stasiun_tujuan= $request->stasiun_tujuan;
+        // $model->nama = $request->nama;
+        // $model->email = $request->email;
+        // $model->kelas = $request->kelas;
+        // $model->jumlah_tiket = $request->jumlah_tiket;
+        // $model->harga= $request->harga;
+        // $model->stasiun_asal = $request->stasiun_asal;
+        // $model->stasiun_tujuan= $request->stasiun_tujuan;
         $validasi = Validator::make($data,[
             // 'id_service'=>'required|max:255',
             // 'id'=>'required',

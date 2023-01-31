@@ -16,7 +16,7 @@ Service
                                         <h4 class="card-title">Edit Service</h4>
 
 
-                                        <form class="custom-validation" method="POST" action="{{ route('service.update',[$service->id]) }}" novalidate="">
+                                        <form class="custom-validation" method="POST" action="{{ route('order.update',[$order->id]) }}" novalidate="">
                                             @method('PUT')
                                             @csrf
                                             @if ($errors->any())
@@ -35,7 +35,7 @@ Service
                                              <div class="mb-3">
                                                 <label>E-Mail</label>
                                                 <div>
-                                                    <input type="email" name="email" class="form-control" required="" parsley-type="email" value="{{ $user->email}}">
+                                                    <input type="email" name="email" class="form-control" required="" parsley-type="email" value="{{ $order->email}}">
                                                 </div>
                                             <div class="mb-3">
                                                 <div class="name">Kelas</div>
